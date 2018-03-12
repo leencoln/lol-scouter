@@ -2,7 +2,7 @@
   <div id="app">
     <Header/>
     <UserNameInput v-on:getUserInfo="getUserInfo"></UserNameInput>
-
+    <UserInfo v-bind:userRankInfo="userRankInfo"></UserInfo>
   </div>
 </template>
 
@@ -17,21 +17,31 @@ import PlayedChampion from './components/PlayedChampion.vue'
 export default {
   name: 'App',
 
+  data () {
+    return {
+      userRankInfo : undefined
+    }
+  },
+
   methods: {  
     getUserInfo(userName) {
       axios.post('api/riot', {
           userName: userName
         })
-        .then(res => console.log(res.data));
+        .then(res => {
+          this.userRankInfo = res.data;
+          this.userRankInfo.totalScore = this.userRankInfo.wins + this.userRankInfo.losses
+          this.userRankInfo.winningRate = Math.round((this.userRankInfo.wins / this.userRankInfo.totalScore) * 10000) / 100;
+        })
     }
 
   },
-
+  
   components: {
     'Header': Header,
-    'UserNameInput': UserNameInput
+    'UserNameInput': UserNameInput,
+    'UserInfo': UserInfo
   }
-
 
 
 }
