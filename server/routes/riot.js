@@ -3,7 +3,7 @@ var router = express.Router();
 
 const { Kayn, REGIONS } = require('kayn');
 
-const apiKey = "RGAPI-d213fd3b-a433-4469-8727-f455d3ead121";
+const apiKey = "RGAPI-c5a23a21-755b-4a67-b0bb-3247ddd13a0e";
 const config = {
     region: REGIONS.KOREA,
     debugOptions: {
@@ -44,5 +44,46 @@ router.post('/', function(req, res, next) {
             }
         })
 });
+
+router.post('/match-record', function(req, res, next) {
+    let userName = req.body.userName;
+
+    kayn.Summoner.by.name(userName)
+        .region('kr')
+        .callback(function(err, summoner) {
+            if(summoner) {
+                let accountID = summoner.accountId;
+
+                kayn.Matchlist.by.accountID(accountID)
+                    .then(playlog => {
+                        let matchlist = playlog.matches;
+                        let championMastery = {};
+
+                        matchlist.forEach((match) => {
+                            let championID = match.champion;
+
+                            if(championMastery[championID]) {
+                                championMastery[championID]++;
+                            } else {
+                                championMastery[championID] = 1;
+                            }
+                        })
+
+                        res.send(championMastery);
+
+                    })
+
+            } else {
+                res.send("Err");
+            }
+        })
+})
+
+router.post('/static-champs-list', function(req, res, next) {
+    kayn.Static.Champion.list()
+        .then(championsList => res.send(championsList.data));
+})
+
+
 
 module.exports = router;

@@ -5,7 +5,7 @@ import App from '@/App'
 import Header from '@/components/Header'
 import UserNameInput from '@/components/UserNameInput'
 import UserInfo from '@/components/UserInfo'
-import PlayedChampion from '@/components/PlayedChampion'
+import PlayedChampions from '@/components/PlayedChampions'
 
 Vue.use(Router)
 
