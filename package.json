@@ -4,12 +4,13 @@
   "description": "search stack in league of legends",
   "main": "index.js",
   "scripts": {
-    "install:client": "cd client && yarn install",
+    "install:client": "cd client && npm install",
     "install:server": "cd server && npm install",
+    "yarn:client": "cd client && yarn install",
     "client": "cd client && npm run start",
     "server": "cd server && npm run start",
     "start": "concurrently \"npm run client\" \"npm run server\"",
-    "lol": "npm run start",    
+    "lol": "npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
