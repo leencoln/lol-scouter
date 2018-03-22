@@ -6,7 +6,7 @@ search stack in league of legends
 
 lol-scouter 는 세계 최대 인기 게임 중 하나인 리그오브레전드 유저에 대한 정보를 검색 할 수 있는 프로젝트 입니다.
 
-![main-view](mainview.png, "lol-scouter")
+![main-view](./mainview.png, "lol-scouter")
 
 ## Installation
 
@@ -57,7 +57,7 @@ localhost:8080
 >- Header: CSS를 활용하여 동적인 헤더를 작성
 >- UserNameInput: 입력받은 유저네임을 통해 유저의 정보 요청을 위해 App 컴포넌트로 유저네임 이벤트 전달, Bootstrap Awesome 아이콘의 저작권 문제로 svg 코드를 참고하여 버튼 아이콘 구현
 >- UserInfo: UserNameInput 컴포넌트에서 입력받은 유저네임은 App 컴포넌트에서 유저정보를 요청하며 다시 props 데이터로 UserInfo 컴포넌트로 전달받아 페이지에 바인딩
-    >- PlayedChampions: 유저의 최근 100게임에 대한 데이터를 전달받아 캐릭터 숙련도를 반지름으로 하는 숙련도정보를 d3를 이용하여 구현할 예정입니다.
+>- PlayedChampions: 유저의 최근 100게임에 대한 데이터를 전달받아 캐릭터 숙련도를 반지름으로 하는 숙련도정보를 d3를 이용하여 구현할 예정입니다.
 (현재는 svg태그내에 캐릭터 수 만큼 node가 임의의 반지름을 가지고 구현되어있는 상태)
 
 ## Command
