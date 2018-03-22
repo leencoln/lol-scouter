@@ -8,7 +8,11 @@ lol-scouter 는 세계 최대 인기 게임 중 하나인 리그오브레전드 
 
 ## Installation
 
-npm install : concurrently install
+```
+npm install
+```
+
+concurrently 이용한 병렬처리를 위해 npm install 을 꼭 실행해주세요(미설치시 npm run lol 실행 불가능!!)
 
 ### Client
 
