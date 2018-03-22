@@ -1,9 +1,15 @@
 {
   "name": "lol-scouter",
-  "version": "1.0.0",
+  "version": "0.9.9",
   "description": "search stack in league of legends",
   "main": "index.js",
   "scripts": {
+    "install:client": "cd client && yarn install",
+    "install:server": "cd server && npm install",
+    "client": "cd client && npm run start",
+    "server": "cd server && npm run start",
+    "start": "concurrently \"npm run client\" \"npm run server\"",
+    "lol": "npm run start",    
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +22,7 @@
     "url": "https://github.com/leencoln/lol-scouter/issues"
   },
   "homepage": "https://github.com/leencoln/lol-scouter#readme",
-  "dependencies": {}
+  "dependencies": {
+    "concurrently": "^3.5.1"
+  }
 }

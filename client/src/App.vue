@@ -4,7 +4,6 @@
     <UserNameInput v-on:getUserInfo="getUserInfo" v-on:getChampionMastery="getChampionMastery"></UserNameInput>
     <br>
     <UserInfo v-bind:userRankInfo="userRankInfo"></UserInfo>
-    <br>
     <PlayedChampions v-bind:championmastery="championmastery"></PlayedChampions>
   </div>
 </template>

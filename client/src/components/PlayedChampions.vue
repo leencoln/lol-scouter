@@ -1,6 +1,6 @@
 <template>
     <div id="championmastery">
-        <svg width="1020" height="500"></svg>
+        <svg width="720" height="300"></svg>
     </div>
 </template>
 <script>

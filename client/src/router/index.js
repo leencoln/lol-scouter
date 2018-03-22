@@ -10,11 +10,18 @@ import PlayedChampions from '@/components/PlayedChampions'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
+
   routes: [
     {
       path: '/',
       name: 'App',
       component: App
+    },
+    {
+      path: '/userName',
+      name: 'UserInfo',
+      component: UserInfo
     }
   ]
 })
