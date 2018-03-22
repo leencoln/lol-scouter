@@ -92,6 +92,7 @@ npm run start : server 실행
 >- concurrently를 이용한 client와 server의 병렬 설치 실행 오류
 >- 하위 컴포넌트에서 상위 컴포넌트로부터 전달받은 props 데이터 수정 방법 미해결
 >- Vue.js는 DOM 직접 접근하는 것을 권장하지 않기 떄문에 D3.js와 함께 사용 할 때, 좀 더 나은 코드를 작성하는 방법 고민
+>- 라이엇 게임즈가 제공하는 API KEY 값은 24시간의 유효 기간이 있습니다.
 
 ## Things to do
 

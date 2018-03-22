@@ -3,7 +3,7 @@ var router = express.Router();
 
 const { Kayn, REGIONS } = require('kayn');
 
-const apiKey = "RGAPI-ebfab86e-ca02-4f7b-8d97-27ea5cad5dc8";
+const apiKey = "RGAPI-104d1b8c-44a1-49f1-a04f-91a97f69386d";
 const config = {
     region: REGIONS.KOREA,
     debugOptions: {
